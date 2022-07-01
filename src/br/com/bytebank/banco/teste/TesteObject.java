@@ -11,7 +11,7 @@ public class TesteObject {
 		System.out.println(false);
 		
 		Object cc = new ContaCorrente(2, 11);
-		Object cp = new ContaPoupança(231, 21);
+		Object cp = new ContaPoupanca(231, 21);
 		Object cliente = new Cliente();
 		
 		System.out.println(cc);

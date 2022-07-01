@@ -2,10 +2,10 @@ package br.com.bytebank.banco.modelo;
 
 
 
-public class ContaPoupança extends Conta {
+public class ContaPoupanca extends Conta {
 	
 	
-	public ContaPoupança(int agencia, int numero) {
+	public ContaPoupanca(int agencia, int numero) {
 		super(agencia,numero);
 	}
 	

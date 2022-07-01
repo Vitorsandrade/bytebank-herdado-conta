@@ -3,7 +3,7 @@ package br.com.bytebank.banco.teste;
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
-import br.com.bytebank.banco.modelo.ContaPoupança;
+import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 public class TesteArrayReferencias {
 
@@ -18,7 +18,7 @@ public class TesteArrayReferencias {
 		
 		ContaCorrente cc1 = new ContaCorrente(10, 230);
 		
-		ContaPoupança cc2 = new ContaPoupança(10, 245);
+		ContaPoupanca cc2 = new ContaPoupanca(10, 245);
 		
 		Cliente cliente = new Cliente();
 		referencias[2] = cliente;
@@ -32,7 +32,7 @@ public class TesteArrayReferencias {
 			System.out.println(contaCorrente);
 		}
 		
-		ContaPoupança ref = (ContaPoupança) referencias[1];
+		ContaPoupanca ref = (ContaPoupanca) referencias[1];
 		System.out.println(ref);
 		
 
