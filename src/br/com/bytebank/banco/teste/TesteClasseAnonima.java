@@ -9,7 +9,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Test {
+public class TesteClasseAnonima {
 
 	public static void main(String[] args) {
 
@@ -53,33 +53,23 @@ public class Test {
 			}
 
 		);
+		
+		Comparator<Conta> comp = new Comparator<Conta>() {
+
+			@Override
+			public int compare(Conta c1, Conta c2) {
+
+				String nomeC1 = c1.getTitular().getNome();
+
+				String nomeC2 = c2.getTitular().getNome();
+
+				return nomeC1.compareTo(nomeC2);
+			}
+		};
 
 		for (Conta conta : lista) {
 			System.out.println(conta);
 		}
-
-	}
-}
-
-class TitularDaContaComparator2 implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta c1, Conta c2) {
-
-		String nomeC1 = c1.getTitular().getNome();
-
-		String nomeC2 = c2.getTitular().getNome();
-
-		return nomeC1.compareTo(nomeC2);
-	}
-
-}
-
-class NumeroDaContaComparator2 implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta c1, Conta c2) {
-		return Integer.compare(c1.getNumero(), c2.getNumero());
 
 	}
 }
