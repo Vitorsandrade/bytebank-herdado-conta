@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
@@ -44,6 +45,20 @@ public class TesteArrayList {
 		
 		for (Conta conta : lista) {
 			System.out.println(conta +"\n");
+		}
+		
+		System.out.println("----------------------------------");
+
+		//Lambda
+		lista.forEach((contas)->System.out.println(contas + "\n") );
+		
+		System.out.println("----------------------------------");
+
+		//iteração
+		Iterator<Conta> it = lista.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
 		}
 		
 
